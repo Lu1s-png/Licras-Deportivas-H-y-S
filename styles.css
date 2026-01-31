@@ -1,0 +1,242 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #d0e8ff, #e2e2e2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px; /* Espacio para el footer fijo */
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Inicio */
+#inicio {
+  padding: 2rem;
+  text-align: center;
+}
+
+#inicio h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+#inicio p {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Tarjetas de producto */
+.producto {
+  background: linear-gradient(135deg, #d0e8ff, #e2e2e2);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  background: linear-gradient(135deg, #5c9dde, #555759);
+  transform: translateY(-5px);
+}
+
+.producto img {
+  max-width: 60%;
+  border-radius: 20px;
+}
+
+/* Contacto */
+#contacto {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  z-index: 100;
+}
+
+/* Productos */
+#productos-dama, 
+#productos-caballero,
+#productos-nino {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Computador: 3 columnas */
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Colores disponibles */
+.colores {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.colores .producto img {
+  max-width: 60%;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #fff;
+    padding: 0.5rem 0;
+    display: block;
+  }
+
+  /* Productos y Colores en pantallas medianas */
+  #productos-dama, 
+  #productos-caballero, 
+  #productos-nino,
+  .colores{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .colores {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Productos y Colores en pantallas muy pequeñas */
+  #productos-dama, 
+  #productos-caballero,
+  #productos-nino,
+  .colores {
+    grid-template-columns: 1fr;
+  }
+
+  .colores {
+    flex-direction: column;
+    align-items: center;
+  }
+}
