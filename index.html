@@ -14,11 +14,21 @@
       <h1>Licras Deportivas H y S</h1>
     </div>
 
-    <div class="menu-container">
+<div class="menu-container">
       <button class="menu-toggle" aria-label="Abrir menú">☰</button>
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
+        
+        <!-- Menú desplegable de Productos -->
+        <li class="dropdown">
+          <a href="#productos" class="dropdown-toggle">Productos</a>
+          <ul class="dropdown-menu">
+            <li><a href="#productos-dama">Prendas para Dama</a></li>
+            <li><a href="#productos-caballero">Prendas para Caballero</a></li>
+            <li><a href="#productos-nino">Prendas para Niño</a></li>
+          </ul>
+        </li>
+        
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -105,14 +115,13 @@
         </div>
             <div class="producto">
             <img src="public/licras mujer/leggins-blusa.png" alt="leggins + blusa">
-            <h4>Leggins + Blusa M/C</h4>
-            <p class="unidad">Precio por unidad: <span>$57.000</span></p>
+            <h4>Leggins licra Dama + Blusa Dama Licra M/C</h4>
+            <p class="unidad">Precio del Conjunto: <span>$57.000</span></p>
         </div>
             <div class="producto">
             <img src="public/licras mujer/leggins-largo.png" alt="leggins largo + blusa manga larga">
-            <h4>Leggings + Blusa Manga Larga M/L</h4>
-            <p class="unidad">Precio por unidad: <span>$20.000</span></p>
-            <p class="mayor">Precio al por mayor: <span>$10.000</span></p>
+            <h4>Leggings Licra Dama Largo + Licra Dama M/C</h4>
+            <p class="unidad">Precio del Conjunto: <span>$62.000</span></p>
         </div>
       </section>
 
@@ -163,12 +172,12 @@
       <div class="producto">
         <img src="public/licras hombre/buso-pantalon.png" alt="Buso M/L + Pantalon">
         <h4>Buso M/L + Pantalon</h4>
-        <p class="unidad">Precio por unidad: <span>$67.000</span></p>
+        <p class="unidad">Precio del Conjunto: <span>$67.000</span></p>
       </div>
       <div class="producto">
         <img src="public/licras hombre/buso-corto.png" alt="Buso M/C + Pantalon Corto">
-        <h4>Buso M/C + Pantalon Corto</h4>
-        <p class="unidad">Precio por unidad: <span>$57.000</span></p>
+        <h4>Buso M/L + Pantalon Corto</h4>
+        <p class="unidad">Precio del Conjunto: <span>$57.000</span></p>
       </div>
     </section>
 
@@ -189,8 +198,7 @@
         <div class="producto">
           <img src="public/licras niño/buso-largo.png" alt="Buso Licra + Pantalon Largo">
           <h4>Buso Licra + Pantalon Largo</h4>
-          <p class="unidad">Precio por unidad: <span>$22.000</span></p>
-          <p class="mayor">Precio al por mayor: <span>$10.000</span></p>
+          <p class="unidad">Precio del Conjunto: <span>$50.000</span></p>
         </div>
       </section>
   </section>
